@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixerhead Studios | Professional Audio Engineering</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        body { font-family: 'Space Grotesk', sans-serif; background-color: #050505; color: #FFFFFF; overflow-x: hidden; }
+        h1, h2, h3, .brand-font { font-family: 'Syncopate', sans-serif; text-transform: uppercase; }
+
+        .neon-accent { color: #00FFCC; }
+        .bg-neon-accent { background-color: #00FFCC; }
+
+        .sound-wave {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            height: 30px;
+        }
+
+        .bar {
+            width: 4px;
+            background-color: #00FFCC;
+            border-radius: 2px;
+            animation: bounce 1s infinite ease-in-out alternate;
+        }
+
+        .bar:nth-child(1) { height: 10px; animation-delay: 0s; }
+        .bar:nth-child(2) { height: 20px; animation-delay: 0.1s; }
+        .bar:nth-child(3) { height: 30px; animation-delay: 0.2s; }
+        .bar:nth-child(4) { height: 15px; animation-delay: 0.3s; }
+        .bar:nth-child(5) { height: 25px; animation-delay: 0.4s; }
+
+        @keyframes bounce {
+            0% { transform: scaleY(0.5); }
+            100% { transform: scaleY(1); }
+        }
+
+        .brutalist-border { border: 2px solid #333; }
+
+        .image-hover-fx img {
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+            filter: grayscale(100%) contrast(1.1);
+        }
+        .image-hover-fx:hover img {
+            transform: scale(1.05);
+            filter: grayscale(0%) contrast(1.2);
+        }
+
+        ::selection { background: #00FFCC; color: #000; }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Nav -->
+    <nav class="fixed w-full top-0 z-50 bg-[#050505]/90 backdrop-blur-md border-b border-[#222] px-8 py-6 flex justify-between items-center">
+        <div class="text-xl brand-font tracking-[0.2em] font-bold flex items-center gap-4">
+            MIXERHEAD
+            <div class="sound-wave hidden md:flex">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            </div>
+        </div>
+        <div class="hidden md:flex gap-10 text-xs tracking-[0.2em] font-bold uppercase text-gray-400">
+            <a href="#services" class="hover:text-[#00FFCC] transition">Engineering</a>
+            <a href="#studio" class="hover:text-[#00FFCC] transition">Facility</a>
+            <a href="#contact" class="hover:text-[#00FFCC] transition">Book</a>
+        </div>
+        <a href="mailto:booking@mixerheadstudios.com" class="text-xs tracking-[0.2em] font-bold uppercase border-2 border-[#00FFCC] text-[#00FFCC] px-6 py-2 hover:bg-[#00FFCC] hover:text-black transition duration-300">Session Request</a>
+    </nav>
+
+    <!-- Hero -->
+    <header class="relative pt-40 pb-20 px-8 min-h-[90vh] flex flex-col justify-center max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 z-10">
+                <p class="text-xs tracking-[0.3em] uppercase text-gray-500 font-bold mb-6">[ ANALOG WARMTH. DIGITAL PRECISION. ]</p>
+                <h1 class="text-6xl md:text-8xl brand-font leading-[1] mb-8 font-bold">
+                    SONIC <br><span class="neon-accent">ARCHITECTS.</span>
+                </h1>
+                <p class="text-xl font-light text-gray-400 max-w-lg leading-relaxed mb-12">
+                    A premier recording, mixing, and mastering facility designed for artists who refuse to compromise on fidelity.
+                </p>
+                <a href="#services" class="inline-block bg-white text-black px-10 py-4 text-sm font-bold tracking-widest uppercase hover:bg-[#00FFCC] transition duration-300">
+                    Explore Services
+                </a>
+            </div>
+            <div class="lg:col-span-5 relative">
+                <div class="image-hover-fx brutalist-border p-4 bg-[#111]">
+                    <img src="https://images.pexels.com/photos/7899457/pexels-photo-7899457.png?auto=compress&cs=tinysrgb&fit=crop&h=800&w=600" alt="Mixing Console" class="w-full h-auto">
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-xs font-bold tracking-widest uppercase text-gray-500">SSL Duality Console</span>
+                        <span class="w-3 h-3 bg-[#00FFCC] rounded-full animate-pulse"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Capabilities / Services -->
+    <section id="services" class="py-32 px-8 border-t border-[#222] bg-[#0A0A0A]">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl md:text-5xl brand-font mb-16 tracking-wider">AUDIO <span class="neon-accent">ENGINEERING</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Recording -->
+                <div class="brutalist-border p-8 bg-[#111] hover:border-[#00FFCC] transition duration-500 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 border-2 border-gray-600 rounded-full flex items-center justify-center mb-6 group-hover:border-[#00FFCC] transition">
+                            <span class="font-bold">01</span>
+                        </div>
+                        <h3 class="text-2xl brand-font mb-4">RECORDING</h3>
+                        <p class="font-light text-gray-400 leading-relaxed mb-8">
+                            Acoustically treated live rooms and vocal booths. World-class microphone locker including vintage Neumanns, Telefunkens, and modern Sony condensers.
+                        </p>
+                    </div>
+                    <p class="text-xs font-bold tracking-widest uppercase text-gray-500">$85 / HR (W/ ENGINEER)</p>
+                </div>
+
+                <!-- Mixing -->
+                <div class="brutalist-border p-8 bg-[#111] hover:border-[#00FFCC] transition duration-500 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 border-2 border-gray-600 rounded-full flex items-center justify-center mb-6 group-hover:border-[#00FFCC] transition">
+                            <span class="font-bold">02</span>
+                        </div>
+                        <h3 class="text-2xl brand-font mb-4">MIXING</h3>
+                        <p class="font-light text-gray-400 leading-relaxed mb-8">
+                            Hybrid analog/digital workflow. We run stems through outboard API, Neve, and SSL hardware to achieve massive depth, width, and punch.
+                        </p>
+                    </div>
+                    <p class="text-xs font-bold tracking-widest uppercase text-gray-500">$350 / SONG</p>
+                </div>
+
+                <!-- Mastering -->
+                <div class="brutalist-border p-8 bg-[#111] hover:border-[#00FFCC] transition duration-500 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 border-2 border-gray-600 rounded-full flex items-center justify-center mb-6 group-hover:border-[#00FFCC] transition">
+                            <span class="font-bold">03</span>
+                        </div>
+                        <h3 class="text-2xl brand-font mb-4">MASTERING</h3>
+                        <p class="font-light text-gray-400 leading-relaxed mb-8">
+                            The final polish. Competitive loudness while preserving dynamic range. Mastered for streaming platforms (Apple Digital Masters, Spotify) and vinyl.
+                        </p>
+                    </div>
+                    <p class="text-xs font-bold tracking-widest uppercase text-gray-500">$100 / SONG</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facility -->
+    <section id="studio" class="py-32 px-8 relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div class="image-hover-fx brutalist-border p-4 bg-[#111] order-2 md:order-1">
+                <img src="https://images.pexels.com/photos/7087167/pexels-photo-7087167.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=800&w=600" alt="Vocal Booth" class="w-full h-auto">
+            </div>
+            <div class="order-1 md:order-2">
+                <h2 class="text-3xl md:text-5xl brand-font mb-8 tracking-wider">THE <span class="text-gray-600">FACILITY.</span></h2>
+                <p class="font-light text-xl text-gray-400 leading-relaxed mb-8">
+                    Designed from the ground up by leading acousticians. Our control room provides a surgically accurate listening environment, ensuring your mixes translate perfectly everywhere.
+                </p>
+                <div class="grid grid-cols-2 gap-8 pt-8 border-t border-[#333]">
+                    <div>
+                        <h4 class="font-bold tracking-widest uppercase text-[#00FFCC] mb-2 text-sm">Monitoring</h4>
+                        <p class="text-gray-500 font-light">ATC SCM45A Pro<br>Yamaha NS-10M</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold tracking-widest uppercase text-[#00FFCC] mb-2 text-sm">Outboard</h4>
+                        <p class="text-gray-500 font-light">Tube-Tech CL 1B<br>Urei 1176LN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-32 px-8 border-t border-[#222] bg-[#050505]">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl md:text-6xl brand-font mb-8">LOCK IN YOUR SOUND.</h2>
+            <p class="font-light text-gray-400 text-lg mb-12 max-w-xl mx-auto">
+                Studio A and the Vocal Suite are available for day rates or hourly booking. Contact management to schedule a tour or discuss your project needs.
+            </p>
+            <a href="mailto:booking@mixerheadstudios.com" class="text-2xl md:text-4xl font-bold tracking-widest hover:text-[#00FFCC] transition border-b-4 border-[#333] hover:border-[#00FFCC] pb-2 inline-block">
+                BOOKING@MIXERHEADSTUDIOS.COM
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-[#111] py-8 text-center text-xs tracking-[0.2em] font-bold text-gray-600 uppercase border-t border-[#222]">
+        &copy; 2026 Mixerhead Studios. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
